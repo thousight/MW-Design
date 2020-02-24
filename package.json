@@ -3,23 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^5.0.0",
+    "@types/styled-system": "^5.1.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.5",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:style": "styleguidist server",
     "build": "react-scripts build",
+    "build:style": "styleguidist build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tslint": "tslint '*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +38,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "prettier": "^1.19.1",
+    "react-docgen-typescript": "^1.16.2",
+    "react-styleguidist": "^10.6.2",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "tslint-react": "^4.2.0"
   }
 }
