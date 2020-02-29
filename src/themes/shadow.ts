@@ -11,7 +11,8 @@ export interface Shadow {
 }
 
 const shadow: Shadow = {
-  default: `4px 4px 10px ${colors.shadow}, -4px -4px 10px ${colors.shadowInvert}`,
+  default: `2px 2px 4px ${colors.shadow}, -2px -2px 4px ${colors.shadowInvert}`,
+  active: `inset 2px 2px 4px ${colors.shadow}, inset -2px -2px 4px ${colors.shadowInvert}`,
 };
 
 export default shadow

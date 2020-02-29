@@ -1,14 +1,21 @@
-## Demos:
+Standard HTML button with smooth shadow animation added.
 
-### Default Button:
+### Demos:
+
+##### Default Button:
 ```js
 <Button>
   Button
 </Button>
 ```
-### Disabled Button:
+
+##### Disabled Button:
 ```js
 <Button disabled>
   Button
 </Button>
+```
+
+### Source Code
+```js { "file": "../Button.tsx" }
 ```
