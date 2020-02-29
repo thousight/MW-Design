@@ -1,7 +1,14 @@
-Button example:
+## Demos:
 
+### Default Button:
 ```js
-<Button rounded>
+<Button>
+  Button
+</Button>
+```
+### Disabled Button:
+```js
+<Button disabled>
   Button
 </Button>
 ```
