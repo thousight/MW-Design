@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should be rendered 1`] = `
+exports[`should be rendered 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
