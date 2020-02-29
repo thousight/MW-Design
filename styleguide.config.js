@@ -2,6 +2,8 @@ const path = require('path')
 const fs = require('fs')
 const withCustomConfig = require('react-docgen-typescript').withCustomConfig
 
+const packageJSON = require('./package.json')
+
 module.exports = {
   propsParser: withCustomConfig('./tsconfig.json', [{
     // eslint-disable-next-line no-undef
@@ -13,6 +15,10 @@ module.exports = {
       return true
     },
   }]).parse,
+  ribbon: {
+    url: 'https://github.com/thousight/MW-Design/',
+    text: 'Follow me on GitHub'
+  },
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/themes/ThemeWrapper')
   },
@@ -43,4 +49,5 @@ module.exports = {
     }
     return props
   },
+  version: packageJSON.version
 };
