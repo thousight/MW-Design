@@ -17,10 +17,10 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:style": "styleguidist server",
-    "build": "react-scripts build",
-    "build:style": "styleguidist build",
+    "start": "styleguidist server",
+    "build": "yarn build:style && yarn build:package",
+    "build:style": "rm -rf ./styleguide && styleguidist build",
+    "build:package": "rm -rf ./lib && tsc",
     "test": "node_modules/.bin/jest",
     "eject": "react-scripts eject",
     "tslint": "tslint '*.{ts,tsx}'"

@@ -17,5 +17,5 @@ Standard HTML button with smooth shadow animation added.
 ```
 
 ### Source Code
-```js { "file": "../Button.tsx" }
+```js { "file": "../index.tsx" }
 ```

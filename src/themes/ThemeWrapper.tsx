@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import theme from './defaultTheme'
+import theme from './theme'
 
 interface ThemeWrapperProps {
   children?: any

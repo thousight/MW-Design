@@ -16,7 +16,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "declaration": true,
+    "pretty": true,
+    "outDir": "./lib",
     "jsx": "react",
     "plugins": [
       {
@@ -26,5 +28,10 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.tsx",
+    "src/themes/ThemeWrapper.tsx"
   ]
 }

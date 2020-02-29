@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 
-import { MWDesignTheme } from '../../themes/defaultTheme'
+import { MWDesignTheme } from '../../themes/theme'
 
-interface ButtonProps {
+export interface ButtonProps {
   theme: MWDesignTheme
 }
 
