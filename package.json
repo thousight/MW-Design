@@ -1,7 +1,21 @@
 {
   "name": "mw-design",
+  "description": "My personal UI library built with styled-component, the goal of it is to be as slim and minimum as possible, but at the same time able to be themed.",
   "version": "0.1.0",
-  "private": true,
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "ui-library",
+    "styled-components"
+  ],
+  "author": "thousight",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thousight/MW-Design.git"
+  },
   "dependencies": {
     "csstype": "^2.6.9",
     "react": "^16.12.0",
@@ -53,6 +67,8 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "react-docgen-typescript": "^1.16.2",
     "react-dom": "^16.12.0",
