@@ -7,19 +7,19 @@ cache:
     - .jest
 jobs:
   include:
-    - stage: test
+    - stage: "Test"
       if: commit_message !~ /(storybook-deploy)/
       script:
         - yarn eslint
         - yarn test --ci
         - yarn build
-    - stage: bump version and release to npm
+    - stage: "Bump version and release to npm"
       if: branch = master AND (NOT type = pull_request) AND  AND (commit_message !~ /(storybook-deploy)/)
       script:
         - yarn test:coveralls
         - yarn build
         - npx semantic-release
-    - stage: deploy and release storybook
+    - stage: "Deploy and release storybook"
         if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(storybook-deploy)/)
         script:
           - yarn test --ci
