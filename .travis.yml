@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "13.8.0"
+cache:
+  directories:
+    - ~/.npm
+    - .jest
+jobs:
+  include:
+    - stage: test
+      script:
+        - yarn eslint
+        - yarn test --ci
+        - yarn build
+    - stage: deploy
+      if: branch = master AND (NOT type = pull_request)
+      script:
+        - yarn test:coveralls
+        - yarn build
+        - yarn semantic-release

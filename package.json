@@ -10,16 +10,15 @@
   },
   "scripts": {
     "start": "styleguidist server",
-    "build": "yarn build:style && yarn build:package",
+    "build": "yarn build:style && yarn build:lib",
     "build:style": "rm -rf ./styleguide && styleguidist build",
-    "build:package": "rm -rf ./lib && tsc",
+    "build:lib": "rm -rf ./lib && tsc",
     "clean": "rm -rf ./lib && rm -rf ./styleguide && rm -rf ./node_modules",
     "test": "node_modules/.bin/jest",
+    "test:coverage": "yarn test --coverage && open coverage/lcov-report/index.html",
+    "test:coveralls": "yarn test --coverage --coverageReporters=text-lcov | coveralls",
     "eject": "react-scripts eject",
-    "eslint": "eslint './**/*.{ts,tsx}'"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eslint": "eslint './src/**/*.{ts,tsx}'"
   },
   "browserslist": {
     "production": [
@@ -34,9 +33,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^25.1.3",
@@ -47,6 +43,7 @@
     "@types/styled-system": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
+    "coveralls": "^3.0.9",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",

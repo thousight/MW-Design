@@ -20,7 +20,7 @@ module.exports = {
     text: 'Follow me on GitHub'
   },
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'src/themes/ThemeWrapper')
+    Wrapper: path.join(__dirname, './src/ThemeWrapper')
   },
   theme: {
     color: {

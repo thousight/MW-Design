@@ -27,11 +27,16 @@
     ]
   },
   "include": [
-    "src"
+    "src",
+    "**/*.tsx",
+    "**/*.ts",
   ],
   "exclude": [
     "node_modules",
+    "lib",
+    "styleguide",
     "**/*.test.tsx",
-    "src/themes/ThemeWrapper.tsx"
+    "jest-setup.ts",
+    "ThemeWrapper.tsx"
   ]
 }
