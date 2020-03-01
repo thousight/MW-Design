@@ -25,7 +25,7 @@ jobs:
     if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(storybook-deploy)/)
     deploy:
       provider: heroku
-      app: MW-Design
+      app: mw-design
       on:
         repo: thousight/MW-Design
       api_key:
