@@ -4,7 +4,7 @@ exports[`should be rendered 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "sc-AxjAm cqhVGW",
+      "class": "sc-AxjAm kfpwJL",
     },
     "children": Array [
       Object {
@@ -57,7 +57,7 @@ exports[`should be rendered without borderRadius 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "sc-AxjAm hvA-dua",
+      "class": "sc-AxjAm kfpwJL",
     },
     "children": Array [
       Object {

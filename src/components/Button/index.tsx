@@ -8,41 +8,40 @@ export interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = styled.button<ButtonProps>`
-  background-color: ${({ theme }) => theme.colors.primary};
-  border: ${({ theme }) => theme.border || 'none'};
-  border-radius: ${({ theme }) => theme.borderRadius || 'none'};
-  box-shadow: ${({ theme }) => theme.shadow.default};
+  background-color: ${({ theme }: { theme: MWDesignTheme }) => theme.colors.primary};
+  border: ${({ theme }: { theme: MWDesignTheme }) => theme.border || 'none'};
+  border-radius: ${({ theme }: { theme: MWDesignTheme }) => theme.borderRadius || 'none'};
+  box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.default};
   box-sizing: border-box;
-  color: ${({ theme }) => theme.colors.text};
-  padding: ${({ theme }) => theme.space.M}px ${({ theme }) => theme.space.XL}px;
+  color: ${({ theme }: { theme: MWDesignTheme }) => theme.colors.text};
+  padding: ${({ theme }: { theme: MWDesignTheme }) => theme.space.M}px ${({ theme }) => theme.space.XL}px;
   position: relative;
 
-  &::before {
-    display: block;
-    box-shadow: ${({ theme }) => theme.shadow.active};
-    border-radius: ${({ theme }) => theme.borderRadius || 'none'};
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 250ms;
+  &:active {
+    box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.active};
   }
 
-  &:active::before {
-    opacity: 1;
+  &:hover {
+    box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.hover};
   }
 
   &:focus {
-    box-shadow: ${({ theme }) => theme.shadow.focus};
-    outline: 0;
+    box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.focus};
+  }
+
+  &:focus-within {
+    box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow['focus-within']};
+  }
+
+  &:visited {
+    box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.visited};
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.colors.disabled};
+    color: ${({ theme }: { theme: MWDesignTheme }) => theme.colors.disabled};
   }
+
+  ${({ theme }: { theme: MWDesignTheme }) => theme.buttonTheme}
 `
 
 Button.displayName = 'Button'
