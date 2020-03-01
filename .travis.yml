@@ -1,27 +1,31 @@
 language: node_js
 node_js:
-  - "13.8.0"
+- 13.8.0
 cache:
   directories:
-    - ~/.npm
-    - .jest
+  - "~/.npm"
+  - ".jest"
 jobs:
   include:
-    - stage: test
-      if: commit_message !~ /(storybook-deploy)/
-      script:
-        - yarn eslint
-        - yarn test --ci
-        - yarn build
-    - stage: deploy
-      name: "Bump version and release to npm"
-      if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(storybook-deploy)/)
-      script:
-        - yarn test:coveralls
-        - yarn build
-        - npx semantic-release
-    - stage: deploy
-      name: "Deploy and release storybook"
-      if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(storybook-deploy)/)
-      script:
-        - yarn test --ci
+  - stage: test
+    if: commit_message !~ /(storybook-deploy)/
+    script:
+    - yarn eslint
+    - yarn test --ci
+    - yarn build
+  - stage: deploy
+    name: Bump version and release to npm
+    if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(storybook-deploy)/)
+    script:
+    - yarn test:coveralls
+    - yarn build
+    - npx semantic-release
+  - stage: deploy
+    name: Deploy and release storybook
+    if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(storybook-deploy)/)
+    provider: heroku
+    api_key:
+      secure: yRd98ph+IJpJQ5SR2NIfdx6M2V6xekJGUnI9/nNtMSMlfQypQQP3g5A74Cx7dwbGQJwGISStE0NDxk985jiZeRFUMZKyRAjYcDpSarEuoFWld06OPCoCQ68zDNEdH86J682UIUBZWgHMefTBpeuu2nSm0wDXX2k8l7jqbYjuP+SHlPxiWuxcYGgWrY/lGGeTbBnnFdM0CGc+uYRXYaumoZ1MC1MnzMdYBiYYDpAlBHT9Ma0THaJPvp4eDA9bnRQHbaUcPAKuVP3wPgX+ewDP8MBD8Ry+WbFL5vFH3PMnJOAzAKE562WPkJMHe7bg/gYqegseFo8U/tkSDBpeoZ9Awhx4WTfhCbQiWDZQIW5ZJ1QF01JCr54UGJAc1fzzOPk0TTqjnSMMN9hZ0alFBAa8Ay/V7u4+CxhgNkKRVfJBrP8lpqs9USJE6ycs5TYQk4UVhECNvbShze77z/43+ech/KpyOQTjCZ586GG0Tz/TSp+S0vMJHYclAM6wrTM566ZAG8PRY/anAW/V+rPXfSdeF0cMSbnO4ZzhWMS1kTZDXjbDyjCTdJCKf2eR8uhL1mPhMAYU0qMmgTy84RenfvlmVk0iy2HPnB1SS7TAtruCS7Bzj9fV68FW6tgLxsaE5uSAALDbpLy+/krcHhUQiC2uX4U1YRcOAgkSvRueEMdVU+w=
+    app: MW-Design
+    on:
+      repo: thousight/MW-Design
