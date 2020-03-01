@@ -1,7 +1,7 @@
 {
   "name": "mw-design",
   "description": "My personal UI library built with styled-component, the goal of it is to be as slim and minimum as possible, but at the same time able to be themed.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "lib"
   ],
