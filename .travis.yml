@@ -15,7 +15,7 @@ jobs:
         - yarn build
     - stage: deploy
       name: "Bump version and release to npm"
-      if: branch = master AND (NOT type = pull_request) AND  AND (commit_message !~ /(storybook-deploy)/)
+      if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(storybook-deploy)/)
       script:
         - yarn test:coveralls
         - yarn build
