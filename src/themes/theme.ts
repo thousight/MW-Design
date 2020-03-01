@@ -16,12 +16,13 @@ const defaultTheme: MWDesignTheme = {
   space,
 
   buttonTheme: `
+    border: none;
     border-radius: 5px;
 
     &::before {
       display: block;
-      box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.active};
-      border-radius: ${({ theme }: { theme: MWDesignTheme }) => theme.borderRadius || 'none'};
+      box-shadow: ${shadow.active};
+      border-radius: 5px;
       content: ' ';
       position: absolute;
       top: 0;
@@ -35,9 +36,13 @@ const defaultTheme: MWDesignTheme = {
     &:active::before {
       opacity: 1;
     }
+
+    &:active {
+      box-shadow: ${shadow.default};
+    }
   
     &:focus {
-      box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.focus};
+      box-shadow: ${shadow.focus};
       outline: 0;
     }
   `,

@@ -9,8 +9,6 @@ export interface ButtonProps {
 
 const Button: FC<ButtonProps> = styled.button<ButtonProps>`
   background-color: ${({ theme }: { theme: MWDesignTheme }) => theme.colors.primary};
-  border: ${({ theme }: { theme: MWDesignTheme }) => theme.border || 'none'};
-  border-radius: ${({ theme }: { theme: MWDesignTheme }) => theme.borderRadius || 'none'};
   box-shadow: ${({ theme }: { theme: MWDesignTheme }) => theme.shadow.default};
   box-sizing: border-box;
   color: ${({ theme }: { theme: MWDesignTheme }) => theme.colors.text};
