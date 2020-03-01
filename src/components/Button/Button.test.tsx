@@ -9,3 +9,9 @@ it('should be rendered', () => {
 
 	expect(rendered).toMatchSnapshot();
 });
+
+it('should be rendered without borderRadius', () => {
+	const rendered = render(<Button theme={{ ...theme, borderRadius: undefined }}>Button</Button>);
+
+	expect(rendered).toMatchSnapshot();
+});
