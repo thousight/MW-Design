@@ -75,7 +75,7 @@
     "react-scripts": "3.4.0",
     "react-styleguidist": "^11.0.0",
     "ts-jest": "^25.2.1",
-    "tslint-react": "^4.2.0",
+    "tslint-react": "^5.0.0",
     "typescript": "^3.8.3",
     "typescript-styled-plugin": "^0.15.0"
   }
