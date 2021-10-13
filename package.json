@@ -17,9 +17,9 @@
     "url": "https://github.com/thousight/MW-Design.git"
   },
   "dependencies": {
-    "csstype": "^2.6.9",
+    "csstype": "^2.6.18",
     "react": "^16.14.0",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.3.1",
     "styled-system": "^5.1.5"
   },
   "scripts": {
