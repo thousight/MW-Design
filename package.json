@@ -19,7 +19,7 @@
   "dependencies": {
     "csstype": "^2.6.19",
     "react": "^16.14.0",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "styled-system": "^5.1.5"
   },
   "scripts": {
