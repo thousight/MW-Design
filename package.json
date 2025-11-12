@@ -4,12 +4,9 @@
   "description": "My personal UI library built with styled-component, the goal of it is to be as slim and minimum as possible, but at the same time able to be themed.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^19.2.0",
