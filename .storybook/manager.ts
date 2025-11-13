@@ -6,7 +6,7 @@ import {
   getActiveTheme,
   getThemeMode,
   THEME_CHANGE_EVENT_KEY,
-} from '../src/theme'
+} from './theming'
 
 const themeKeys = Object.keys(storybookThemes)
 

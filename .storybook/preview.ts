@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/react-vite'
 import {
-  themes,
   storybookThemes,
   getThemeMode,
   getSystemTheme,
@@ -9,7 +8,8 @@ import {
   THEME_STORAGE_KEY,
   THEME_MODE_KEY,
   THEME_CHANGE_EVENT_KEY,
-} from '../src/theme'
+} from './theming'
+import { themes } from '../src/theme'
 import '../src/theme/theme.css'
 
 const themeKeys = Object.keys(storybookThemes)
