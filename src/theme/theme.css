@@ -1,0 +1,10 @@
+/* src/theme.css */
+:root {
+  --mwds-font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html, body, #root {
+  font-family: var(--mwds-font-family);
+  background-color: var(--mwds-bg);
+  color: var(--mwds-text);
+}
