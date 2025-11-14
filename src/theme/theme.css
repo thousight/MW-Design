@@ -5,6 +5,6 @@
 
 html, body, #root {
   font-family: var(--mwds-font-family);
-  background-color: var(--mwds-bg);
+  background-color: var(--mwds-background);
   color: var(--mwds-text);
 }

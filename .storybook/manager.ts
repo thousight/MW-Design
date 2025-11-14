@@ -1,10 +1,7 @@
 import { addons } from 'storybook/manager-api'
 import {
   storybookThemes,
-  getSystemTheme,
-  mapSystemThemeToAvailableTheme,
   getActiveTheme,
-  getThemeMode,
   THEME_CHANGE_EVENT_KEY,
 } from './theming'
 
@@ -37,29 +34,5 @@ if (typeof window !== 'undefined') {
     }
   })
 
-  // Listen for system theme changes (only in browser)
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-
-  const handleSystemThemeChange = () => {
-    const themeMode = getThemeMode()
-
-    // Only update manager theme if in system mode
-    if (themeMode === 'system') {
-      const systemTheme = getSystemTheme()
-      const themeToApply = mapSystemThemeToAvailableTheme(systemTheme)
-      const storybookTheme = storybookThemes[themeToApply]
-
-      if (storybookTheme) {
-        addons.setConfig({ theme: storybookTheme })
-      }
-    }
-  }
-
-  // Listen for system theme changes
-  if (mediaQuery.addEventListener) {
-    mediaQuery.addEventListener('change', handleSystemThemeChange)
-  } else {
-    // Fallback for older browsers
-    mediaQuery.addListener(handleSystemThemeChange)
-  }
+  // (System theme support removed) Manager no longer listens to OS theme changes.
 }
