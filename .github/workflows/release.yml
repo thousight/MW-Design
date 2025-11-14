@@ -19,13 +19,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'npm'
+          cache: 'yarn'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install dependencies (yarn)
+        run: yarn install --frozen-lockfile
 
-      - name: Build project
-        run: npm run build
+      - name: Build project (yarn)
+        run: yarn build
 
       - name: Release to npm
         run: npx semantic-release
