@@ -5,15 +5,12 @@
   border-radius: 3em;
   font-weight: 700;
   line-height: 1;
+  background-color: var(--mwds-accent);
+  color: var(--mwds-btn-text);
 }
-.storybook-button--primary {
-  background-color: var(--mwds-primary);
-  color: var(--mwds-background);
-}
-.storybook-button--secondary {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  background-color: var(--mwds-secondary);
-  color: var(--mwds-background);
+.storybook-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 .storybook-button--small {
   padding: 10px 16px;
