@@ -1,42 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "declaration": true,
-    "pretty": true,
-    "outDir": "./lib",
-    "jsx": "react",
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin",
-      }
-    ]
-  },
-  "include": [
-    "src",
-    "**/*.tsx",
-    "**/*.ts",
-  ],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "styleguide",
-    "**/*.test.tsx",
-    "jest-setup.ts",
-    "ThemeWrapper.tsx"
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
   ]
 }
