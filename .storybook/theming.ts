@@ -1,5 +1,6 @@
 import { create } from 'storybook/theming'
 import { themes } from '../src/theme'
+import { THEME_TOKEN_ACCENT, THEME_TOKEN_TEXT } from '../src/theme/tokens'
 
 export const THEME_STORAGE_KEY = 'mwds-theme'
 export const THEME_CHANGE_EVENT_KEY = 'mwds-theme-change'
@@ -15,7 +16,7 @@ const isDarkTheme = (
   }
 
   // Check background color brightness as fallback
-  const bgColor = themeVars['--mwds-bg'] || themeVars['--mwds-background'] || ''
+  const bgColor = themeVars['--mwds-primary'] || ''
   if (bgColor) {
     // Simple heuristic: if background is dark (low brightness), use dark base
     // This is a basic check - you might want a more sophisticated color analysis
@@ -39,9 +40,9 @@ export const storybookThemes = Object.entries(themes).reduce(
     acc[themeName] = create({
       base: isDarkTheme(themeName, themeVars) ? 'dark' : 'light',
       brandTitle: 'MW-Design',
-      colorPrimary: themeVars['--mwds-primary'],
-      colorSecondary:
-        themeVars['--mwds-secondary'] || themeVars['--mwds-primary'],
+      colorPrimary: themeVars[THEME_TOKEN_ACCENT],
+      fontBase: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+      textColor: themeVars[THEME_TOKEN_TEXT],
     })
 
     return acc
